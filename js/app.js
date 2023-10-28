@@ -6,7 +6,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 
 "The sum of 4 and 7 is 11."
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, check the console to see if the test passes.*/
 
 function sum(a, b) {
   let sumResult = a + b;
@@ -14,8 +14,8 @@ function sum(a, b) {
   return [sumResult, message];
 }
 
-// Uncomment this line to test sum()
-// testSum(4, 7);
+// Test the sum function
+testSum(4, 7);
 
 /////////////////////////////////////
 /* Problem 2
@@ -23,7 +23,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 "The product of 5 and 9 is 45."
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, check the console to see if the test passes.*/
 
 function multiply(a, b) {
   let productResult = a * b;
@@ -31,8 +31,8 @@ function multiply(a, b) {
   return [productResult, message];
 }
 
-// Uncomment this line to test multiply()
-// testMultiply(5, 9);
+// Test the multiply function
+testMultiply(5, 9);
 
 /////////////////////////////////////
 /* Problem 3
@@ -41,9 +41,7 @@ Write a function called sumAndMultiply() that takes in three numbers as separate
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
-
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, check the console to see if the test passes.*/
 
 function sumAndMultiply(a, b, c) {
   let sumResult = sum(sum(a, b)[0], c)[0];
@@ -53,8 +51,8 @@ function sumAndMultiply(a, b, c) {
   return [sumResult, productResult, sumMessage, productMessage];
 }
 
-// Uncomment this line to test sumAndMultiply()
-// testSumAndMultiply(4, 7, 5);
+// Test the sumAndMultiply function
+testSumAndMultiply(4, 7, 5);
 
 /////////////////////////////////////
 /* Problem 4
@@ -62,9 +60,7 @@ Write a function called sumArray() that takes in an array of numbers as its sing
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
-
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, check the console to see if the test passes.*/
 
 function sumArray(sumArr) {
   let sumResult = 0;
@@ -76,8 +72,8 @@ function sumArray(sumArr) {
   return [sumResult, message];
 }
 
-// Uncomment this line to test sumArray()
-// testSumArray([2, 3, 4]);
+// Test the sumArray function
+testSumArray([2, 3, 4]);
 
 /////////////////////////////////////
 /* Problem 5
@@ -85,9 +81,7 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 
 "The numbers 2,3,4 have a product of 24."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
-
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, check the console to see if the test passes.*/
 
 function multiplyArray(multArr) {
   let productResult = 1;
@@ -99,8 +93,8 @@ function multiplyArray(multArr) {
   return [productResult, message];
 }
 
-// Uncomment this line to test multiplyArray()
-// testMultiplyArray([2, 3, 4]);
+// Test the multiplyArray function
+testMultiplyArray([2, 3, 4]);
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
@@ -108,8 +102,16 @@ Write a function called multiplyAnyArray() that takes an array of numbers of any
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+Test this function by hand in the console to get it working, and when you think it is finished, check the console to see if the test passes.*/
 
-This function should be dynamic, accepting an array of any length.
+function multiplyAnyArray(dynamicArray) {
+  let productResult = 1;
+  for (let number of dynamicArray) {
+    productResult = multiply(productResult, number)[0];
+  }
+  let numbersString = dynamicArray.join(',');
+  let message = `The numbers ${numbersString} have a product of ${productResult}.`;
+  return [productResult, message];
+}
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the
+// Test the multiplyAnyArray function
