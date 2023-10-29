@@ -11,66 +11,68 @@
   <!-- Problem 1: sum() -->
   <h2>sum()</h2>
   <p>
-    <label for="num1">Enter first number:</label>
-    <input type="number" id="num1">
-    <label for="num2">Enter second number:</label>
-    <input type="number" id="num2">
-    <button onclick="testSum()">Test</button>
+    <label for="sumA">A:</label>
+    <input type="number" id="sumA" placeholder="Enter a number">
+    <label for="sumB">B:</label>
+    <input type="number" id="sumB" placeholder="Enter a number">
+    <button onclick="calculateSum()">Calculate</button>
     <p id="sumResult"></p>
   </p>
 
   <!-- Problem 2: multiply() -->
   <h2>multiply()</h2>
   <p>
-    <label for="num3">Enter first number:</label>
-    <input type="number" id="num3">
-    <label for="num4">Enter second number:</label>
-    <input type="number" id="num4">
-    <button onclick="testMultiply()">Test</button>
+    <label for="multiplyA">A:</label>
+    <input type="number" id="multiplyA" placeholder="Enter a number">
+    <label for="multiplyB">B:</label>
+    <input type="number" id "multiplyB" placeholder="Enter a number">
+    <button onclick="calculateMultiply()">Calculate</button>
     <p id="multiplyResult"></p>
   </p>
 
   <!-- Problem 3: sumAndMultiply() -->
   <h2>sumAndMultiply()</h2>
   <p>
-    <label for="num5">Enter first number:</label>
-    <input type="number" id="num5">
-    <label for="num6">Enter second number:</label>
-    <input type="number" id="num6">
-    <label for="num7">Enter third number:</label>
-    <input type="number" id="num7">
-    <button onclick="testSumAndMultiply()">Test</button>
-    <p id="sumAndMultiplyResult"></p>
+    <label for="saA">A:</label>
+    <input type="number" id="saA" placeholder="Enter a number">
+    <label for="saB">B:</label>
+    <input type="number" id="saB" placeholder="Enter a number">
+    <label for="saC">C:</label>
+    <input type="number" id="saC" placeholder="Enter a number">
+    <button onclick="calculateSumAndMultiply()">Calculate</button>
+    <p id="saSumResult"></p>
+    <p id="saProductResult"></p>
   </p>
 
   <!-- Problem 4: sumArray() -->
   <h2>sumArray()</h2>
   <p>
-    <label for="arrayInput">Enter an array of numbers (comma-separated):</label>
-    <input type="text" id="arrayInput">
-    <button onclick="testSumArray()">Test</button>
+    <label for="arrayValues">Enter numbers (comma-separated):</label>
+    <input type="text" id="arrayValues" placeholder="e.g., 2,3,4">
+    <button onclick="calculateSumArray()">Calculate</button>
     <p id="sumArrayResult"></p>
   </p>
 
   <!-- Problem 5: multiplyArray() -->
   <h2>multiplyArray()</h2>
   <p>
-    <label for="arrayInput">Enter an array of numbers (comma-separated):</label>
-    <input type="text" id="arrayInput">
-    <button onclick="testMultiplyArray()">Test</button>
+    <label for="multArrayValues">Enter numbers (comma-separated):</label>
+    <input type="text" id="multArrayValues" placeholder="e.g., 2,3,4">
+    <button onclick="calculateMultiplyArray()">Calculate</button>
     <p id="multiplyArrayResult"></p>
   </p>
 
-  <!-- Problem 6: multiplyAnyArray() (Stretch Goal) -->
-  <h2>multiplyAnyArray() (Stretch Goal)</h2>
-  <p>
-    <label for="arrayInput">Enter an array of numbers (comma-separated):</label>
-    <input type="text" id="arrayInput">
-    <button onclick="testMultiplyAnyArray()">Test</button>
-    <p id="multiplyAnyArrayResult"></p>
-  </p>
+  <!-- Optional: Problem 6 - multiplyAnyArray() -->
+  <!-- Uncomment this section if you choose to attempt the stretch goal -->
 
-  <script src="js/tests.js" type="text/javascript"></script>
+  <!-- <h2>multiplyAnyArray()</h2>
+  <p>
+    <label for="dynamicArrayValues">Enter numbers (comma-separated):</label>
+    <input type="text" id="dynamicArrayValues" placeholder="e.g., 1,2,3,4,5">
+    <button onclick="calculateMultiplyAnyArray()">Calculate</button>
+    <p id="multiplyAnyArrayResult"></p>
+  </p> -->
+
   <script src="js/app.js" type="text/javascript"></script>
 </body>
 
